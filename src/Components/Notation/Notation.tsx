@@ -29,7 +29,7 @@ export default function Notation() {
         <Message_box text="Это важно знать:" />
         <div className="notation_list">
           {notation_data.map((obj) => (
-            <ListItem icon={bullet_icon_data} text={obj.text} />
+            <ListItem key={obj.text} icon={bullet_icon_data} text={obj.text} />
           ))}
         </div>
       </div>

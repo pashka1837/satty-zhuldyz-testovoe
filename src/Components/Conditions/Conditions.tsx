@@ -29,7 +29,11 @@ export default function Conditions() {
         <div className="conditions_text">
           <div className="condtions_list">
             {conditionsAr.map((obj) => (
-              <ListItem icon={bullet_icon_data} text={obj.text} />
+              <ListItem
+                key={obj.text}
+                icon={bullet_icon_data}
+                text={obj.text}
+              />
             ))}
           </div>
         </div>

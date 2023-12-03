@@ -3,7 +3,7 @@
   position: relative;
   &::before {
     width: 77%;
-    background-image: url(public/assets/images/mobile/faq_eclipse_mob.svg);
+    background-image: url(assets/images/mobile/faq_eclipse_mob.svg);
     background-repeat: no-repeat;
     position: absolute;
     top: -50px;
@@ -25,7 +25,7 @@
   .message_box_container {
     width: 250px;
     height: 120px;
-    background-image: url(public/assets/images/mobile/msg_box_faq_mob.svg);
+    background-image: url(assets/images/mobile/msg_box_faq_mob.svg);
     h1 {
       font-size: 1.31rem;
       max-width: 208px;

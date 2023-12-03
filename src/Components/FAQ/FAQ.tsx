@@ -37,7 +37,7 @@ export default function FAQ() {
         <Message_box text="Часто задаваемые вопросы:" />
         <div className="accordion_container">
           {accordion_data.map((data, i) => (
-            <Accordion_item {...data} index={i} />
+            <Accordion_item key={data.answer} {...data} index={i} />
           ))}
         </div>
       </div>
