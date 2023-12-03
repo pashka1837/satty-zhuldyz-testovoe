@@ -1,0 +1,26 @@
+.notation {
+  padding: 30px 14.5px 0;
+}
+
+.notation_container {
+  .message_box_container {
+    background-image: url(public/assets/images/mobile/msg_box_conditions_mob.svg);
+    width: 231px;
+    height: 92.61px;
+    h1 {
+      font-size: 1.31rem;
+    }
+  }
+}
+
+.notation_list {
+  .list_item {
+    padding: 4px 4px 4px 20px;
+    align-items: self-start;
+    gap: 15px;
+    p {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}

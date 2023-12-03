@@ -1,0 +1,7 @@
+.list_item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  p {
+    font-weight: 400;
+  }
+}

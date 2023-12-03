@@ -3,7 +3,9 @@ import "./App.scss";
 import Conditions from "./Components/Conditions/Conditions";
 import FAQ from "./Components/FAQ/FAQ";
 import Hero from "./Components/Hero/Hero";
+import Legal from "./Components/Legal/Legal";
 import Navbar from "./Components/Navbar/Navbar";
+import Notation from "./Components/Notation/Notation";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Hero />
         <Conditions />
         <FAQ />
+        <Notation />
+        <Legal />
       </main>
     </>
   );

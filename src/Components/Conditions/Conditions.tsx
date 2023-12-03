@@ -1,11 +1,11 @@
 import bullet_icon from "../../assets/bullet_icon.svg";
-import { conditionsArType } from "../../types/conditionsArType";
+import { listDataType } from "../../types/conditions";
 
-bullet_icon;
 import "./Conditions.scss";
 import Message_box from "../Message_box/Message_box";
+import ListItem from "../ListItem/ListItem";
 
-const conditionsAr: conditionsArType = [
+const conditionsAr: listDataType[] = [
   {
     text: "Купите билет SuperLoto на 229 тираж, 8 ноября.",
   },
@@ -22,10 +22,7 @@ export default function Conditions() {
         <div className="conditions_text">
           <div className="condtions_list">
             {conditionsAr.map((obj) => (
-              <div className="condtions_list_item">
-                <img src={bullet_icon} alt="Bullet icon" />
-                <p>{obj.text}</p>
-              </div>
+              <ListItem icon={bullet_icon} text={obj.text} />
             ))}
           </div>
         </div>

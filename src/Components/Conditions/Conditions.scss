@@ -26,6 +26,9 @@
     background-image: url(public/assets/images/mobile/msg_box_conditions_mob.svg);
     width: 231px;
     height: 85px;
+    h1 {
+      font-size: 1.31rem;
+    }
   }
 }
 
@@ -35,18 +38,14 @@
 
 .condtions_list {
   display: grid;
-}
-
-.condtions_list_item {
-  padding: 4px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 20px;
-  p {
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.3rem;
+  .list_item {
+    padding: 4px;
+    align-items: center;
+    gap: 20px;
+    p {
+      font-size: 1rem;
+      line-height: 1.3rem;
+    }
   }
 }
 
@@ -56,6 +55,7 @@
 }
 
 .conditions_buy_btn {
+  cursor: pointer;
   width: 100%;
   height: 50px;
   border: none;
