@@ -12,18 +12,22 @@
     position: relative;
     display: grid;
     &::before {
-        width: 400px;
-        height: 400px;
-        background-image: url(../../../public/assets/images/hero_ellipse.svg);
+        width: 385px;
+        height: 385px;
+        background-image: url(public/assets/images/hero_ellipse.svg);
         background-repeat: no-repeat;
-        background-size: contain;
+        /* background-size: cover; */
         position: absolute;
-        top: -50px;
-        left: -50px;
+        // top: -192px;
+        // left: -92px;
         content: "";
         z-index: 0;
-        filter: blur(100px);
+        filter: blur(10px);
     }
+}
+
+.hero_images {
+    z-index: 2;
 }
 
 
