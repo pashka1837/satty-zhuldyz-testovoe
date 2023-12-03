@@ -1,0 +1,14 @@
+@use 'variables' as v;
+
+#root,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  color: v.$text-color;
+  background-color: v.$BG-main-color;
+}
