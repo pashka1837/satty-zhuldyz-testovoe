@@ -12,9 +12,9 @@ export default function Hero() {
           <picture>
             <img className="hero_logo" src={hero_logo} alt="Hero image" />
           </picture>
-          <picture className="ball_icon ball_3">
-            <img src={ball_icon_3} alt="ball icon" />
-          </picture>
+          <div className="ball_icon ball_3">
+            {/* <img src={ball_icon_3} alt="ball icon" /> */}
+          </div>
           <picture className="ball_icon ball_5">
             <img src={ball_icon_5} alt="ball icon" />
           </picture>

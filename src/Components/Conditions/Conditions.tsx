@@ -1,4 +1,3 @@
-import message_box_sm_icon from "../../assets/message_box_sm_icon.svg";
 import bullet_icon from "../../assets/bullet_icon.svg";
 import { conditionsArType } from "../../types/conditionsArType";
 
@@ -18,18 +17,8 @@ const conditionsAr: conditionsArType = [
 export default function Conditions() {
   return (
     <section className="conditions">
-      <div className="container_conditions">
-        {/* <div
-          className="conditions_icon"
-          style={{
-            backgroundImage: `url(${message_box_sm_icon})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        >
-          <h1>Условия акции:</h1>
-        </div> */}
-        <Message_box text="Условия акции:" icon={message_box_sm_icon} />
+      <div className="conditions_container">
+        <Message_box text="Условия акции:" />
         <div className="conditions_text">
           <div className="condtions_list">
             {conditionsAr.map((obj) => (
@@ -40,22 +29,12 @@ export default function Conditions() {
             ))}
           </div>
         </div>
-      </div>
-      <div className="conditions_btn_container">
-        <button className="conditions_buy_btn" type="button">
-          Купить билет
-        </button>
+        <div className="conditions_btn_container">
+          <button className="conditions_buy_btn" type="button">
+            Купить билет
+          </button>
+        </div>
       </div>
     </section>
   );
-}
-
-{
-  /* <ul className="condtions_list">
-            {conditionsAr.map((obj) => (
-              <li>
-                <p>{obj.text}</p>
-              </li>
-            ))}
-          </ul> */
 }
