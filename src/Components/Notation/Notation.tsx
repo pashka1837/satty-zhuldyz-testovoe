@@ -1,8 +1,11 @@
 import Message_box from "../Message_box/Message_box";
-import exclamation_mob from "../../assets/mobile/exclamation_mob.svg";
+import exclamation_bullet_MOB from "../../assets/mobile/exclamation_bullet_MOB.svg";
+import exclamation_bullet_DT from "../../assets/desktop/exclamation_bullet_DT.svg";
+
 import "./Notation.scss";
 import ListItem from "../ListItem/ListItem";
-import { listDataType } from "../../types/conditions";
+import { listDataType } from "../../types/listData";
+import { IconParamsT } from "../../types/iconParamsT";
 
 const notation_data: listDataType[] = [
   {
@@ -13,6 +16,12 @@ const notation_data: listDataType[] = [
   },
 ];
 
+const bullet_icon_data: Omit<IconParamsT, "alt"> = {
+  iconMOB: exclamation_bullet_MOB,
+  iconDT: exclamation_bullet_DT,
+  className: "",
+};
+
 export default function Notation() {
   return (
     <section className="notation">
@@ -20,7 +29,7 @@ export default function Notation() {
         <Message_box text="Это важно знать:" />
         <div className="notation_list">
           {notation_data.map((obj) => (
-            <ListItem icon={exclamation_mob} text={obj.text} />
+            <ListItem icon={bullet_icon_data} text={obj.text} />
           ))}
         </div>
       </div>

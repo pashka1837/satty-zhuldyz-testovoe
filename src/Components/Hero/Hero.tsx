@@ -1,8 +1,35 @@
 import "./Hero.scss";
 import hero_logo from "../../assets/hero_logo.png";
-import ball_icon_3 from "../../assets/mobile/ball_icon_3.svg";
-import ball_icon_5 from "../../assets/mobile/ball_icon_5.svg";
-import ball_icon_8 from "../../assets/mobile/ball_icon_8.svg";
+import ball_3_MOB from "../../assets/mobile/ball_3_MOB.svg";
+import ball_5_MOB from "../../assets/mobile/ball_5_MOB.svg";
+import ball_8_MOB from "../../assets/mobile/ball_8_MOB.svg";
+
+import ball_3_DT from "../../assets/desktop/ball_3_DT.svg";
+import ball_5_DT from "../../assets/desktop/ball_5_DT.svg";
+import ball_8_DT from "../../assets/desktop/ball_8_DT.svg";
+import { IconParamsT } from "../../types/iconParamsT";
+import Responsive_icon from "../Responsive_icon/Responsive_icon";
+
+const ball_icons_data: IconParamsT[] = [
+  {
+    iconMOB: ball_3_MOB,
+    iconDT: ball_3_DT,
+    className: "ball_icon ball_3",
+    alt: "ball icon",
+  },
+  {
+    iconMOB: ball_5_MOB,
+    iconDT: ball_5_DT,
+    className: "ball_icon ball_5",
+    alt: "ball icon",
+  },
+  {
+    iconMOB: ball_8_MOB,
+    iconDT: ball_8_DT,
+    className: "ball_icon ball_8",
+    alt: "ball icon",
+  },
+];
 
 export default function Hero() {
   return (
@@ -12,15 +39,9 @@ export default function Hero() {
           <picture>
             <img className="hero_logo" src={hero_logo} alt="Hero image" />
           </picture>
-          <div className="ball_icon ball_3">
-            {/* <img src={ball_icon_3} alt="ball icon" /> */}
-          </div>
-          <picture className="ball_icon ball_5">
-            <img src={ball_icon_5} alt="ball icon" />
-          </picture>
-          <picture className="ball_icon ball_8">
-            <img src={ball_icon_8} alt="ball icon" />
-          </picture>
+          {ball_icons_data.map((ballObj) => (
+            <Responsive_icon key={ballObj.className} {...ballObj} />
+          ))}
         </div>
         <div className="hero_info">
           <div className="hero_title">

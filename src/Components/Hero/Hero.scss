@@ -7,7 +7,7 @@
   &::before {
     width: 385px;
     height: 385px;
-    background-image: url(public/assets/images/hero_ellipse.svg);
+    background-image: url(public/assets/images/mobile/generic_ellipse_mob.svg);
     background-repeat: no-repeat;
     position: absolute;
     content: "";
@@ -68,11 +68,6 @@
 .ball_3 {
   left: 0;
   top: 220px;
-  width: 67.2px;
-  height: 70.2px;
-  background-image: url(public/assets/images/mobile/ball_icon_3.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .ball_5 {

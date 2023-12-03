@@ -1,9 +1,10 @@
-import bullet_icon from "../../assets/bullet_icon.svg";
-import { listDataType } from "../../types/conditions";
+import generic_bullet from "../../assets/generic_bullet.svg";
+import { listDataType } from "../../types/listData";
 
 import "./Conditions.scss";
 import Message_box from "../Message_box/Message_box";
 import ListItem from "../ListItem/ListItem";
+import { IconParamsT } from "../../types/iconParamsT";
 
 const conditionsAr: listDataType[] = [
   {
@@ -14,6 +15,12 @@ const conditionsAr: listDataType[] = [
   },
 ];
 
+const bullet_icon_data: Omit<IconParamsT, "alt"> = {
+  iconMOB: generic_bullet,
+  iconDT: generic_bullet,
+  className: "",
+};
+
 export default function Conditions() {
   return (
     <section className="conditions">
@@ -22,7 +29,7 @@ export default function Conditions() {
         <div className="conditions_text">
           <div className="condtions_list">
             {conditionsAr.map((obj) => (
-              <ListItem icon={bullet_icon} text={obj.text} />
+              <ListItem icon={bullet_icon_data} text={obj.text} />
             ))}
           </div>
         </div>

@@ -26,6 +26,7 @@ nav {
 .right_side {
   display: grid;
   grid-template-columns: repeat(3, auto);
+  align-items: center;
   gap: 10px;
 }
 
