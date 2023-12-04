@@ -39,7 +39,7 @@ export default function Navbar() {
           <button className="menu_mob_btn" type="button">
             <Responsive_icon {...menu_btn} />
           </button>
-          <a href="https://sz.kz" className="logo_mob_btn" type="button">
+          <a href="https://sz.kz" className="logo_btn" type="button">
             <Responsive_icon {...logo_btn} />
           </a>
           <p className="desc">Национальная лотерея</p>

@@ -2,6 +2,7 @@
 
 .hero {
   margin-top: -(v.$NavBar-height);
+  height: 730px;
   position: relative;
   z-index: 1;
   &::before {
@@ -26,13 +27,26 @@
 }
 
 .hero_images {
+  position: relative;
   z-index: 1;
+  height: 600px;
+  /*new*/
+  &::before {
+    position: absolute;
+    height: 600px;
+    width: 100%;
+    content: "";
+    background-image: url(assets/images/mobile/hero_main_MOB.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
 }
 
 .hero_info {
   padding: 0 14.5px;
   height: min-content;
-  margin-top: -50%;
+  // margin-top: -50%;
   display: flex;
   flex-direction: column;
   gap: 20px;

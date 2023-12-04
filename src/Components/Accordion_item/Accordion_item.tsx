@@ -1,5 +1,5 @@
 import { useState } from "react";
-import open_accordion from "../../assets/open_accordion.svg";
+// import open_accordion from "../../assets/open_accordion.svg";
 import close_accordion from "../../assets/close_accordion.svg";
 import "./Accordion_item.scss";
 import { single_accordion_Type } from "../../types/singleAccortion";
@@ -15,12 +15,12 @@ export default function Accordion_item({
       <div className="single_accordion_question">
         <p>{question}</p>
         <button
-          className="single_accordion_btn"
+          className={`single_accordion_btn ${isOpen ? "open" : ""}`}
           type="button"
           onClick={() => setOpen(!isOpen)}
         >
           <img
-            src={isOpen ? close_accordion : open_accordion}
+            src={close_accordion}
             alt={isOpen ? "Close Accordion" : "Open Accordion"}
           />
         </button>

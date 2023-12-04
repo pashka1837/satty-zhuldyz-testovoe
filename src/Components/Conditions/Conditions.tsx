@@ -38,11 +38,13 @@ export default function Conditions() {
           </div>
         </div>
         <div className="conditions_btn_container">
-          <button className="conditions_buy_btn" type="button">
+          <a className="conditions_buy_btn" type="button">
             Купить билет
-          </button>
+          </a>
         </div>
       </div>
     </section>
   );
 }
+
+// href="https://sz.kz"

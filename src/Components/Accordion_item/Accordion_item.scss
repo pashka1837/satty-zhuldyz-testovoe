@@ -35,10 +35,15 @@
   align-self: self-start;
   background-color: transparent;
   border: none;
+  transform: rotate(0deg);
+  transition: all ease-in 0.2s;
   img {
     width: 20px;
     height: 20px;
   }
+}
+.open {
+  transform: rotate(45deg);
 }
 
 .single_accordion_answer {
