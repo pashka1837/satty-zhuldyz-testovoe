@@ -11,9 +11,8 @@ nav {
 }
 .container {
   width: 100%;
-  display: grid;
+  display: flex;
   justify-content: space-between;
-  grid-template-columns: repeat(2, auto);
 }
 
 .desc {
@@ -24,14 +23,43 @@ nav {
 
 .left_side,
 .right_side {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+  display: flex;
   align-items: center;
   gap: 10px;
 }
 
+.nav_pop_up {
+  position: absolute;
+  top: v.$NavBar-height;
+  left: 15px;
+  padding: 10px 15px;
+  background-color: rgb(255, 255, 255, 0.9);
+  border-radius: 15px;
+  display: none;
+  flex-direction: column;
+  a {
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: v.$BG-main-color;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    background-color: transparent;
+    &:hover {
+      color: white;
+      background-color: rgba(181, 15, 94, 1);
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+  }
+}
+
 //BUTTONS//
 .menu_mob_btn,
+.menu_btn_DT,
 .logo_btn,
 .notification_btn,
 .change_lang_btn {
@@ -40,6 +68,9 @@ nav {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+.menu_btn_DT {
+  display: none;
 }
 
 .menu_mob_btn,
@@ -60,4 +91,113 @@ nav {
 .logo_btn {
   width: 50px;
   height: 26px;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    height: 70px;
+    padding: 0 5%;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 5px 10px 0px rgba(43, 93, 168, 0.15);
+  }
+
+  .container {
+    gap: 24px;
+  }
+
+  .desc {
+    display: none;
+  }
+
+  .nav_pop_up {
+    position: absolute;
+    width: 100%;
+    top: 69px;
+    left: 0;
+    padding: 2% 5%;
+    background-color: rgb(255, 255, 255, 0.9);
+    border-radius: 0;
+    display: none;
+    align-items: flex-start;
+    a {
+      &:hover {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .right_side {
+    gap: 20px;
+  }
+
+  .logo_btn {
+    width: 93px;
+    height: 50px;
+  }
+
+  .change_lang_btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0px 3px 20px 8px rgba(43, 93, 168, 0.2);
+    color: rgba(43, 93, 168, 1);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 10px;
+    &:hover {
+      background-color: rgba(43, 93, 168, 1);
+      color: white;
+    }
+    &:active {
+      background-color: rgba(43, 93, 168, 1);
+      color: white;
+    }
+  }
+
+  .menu_mob_btn {
+    display: none;
+  }
+
+  .menu_btn_DT,
+  .notification_btn {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    &:hover {
+      background-color: rgba(43, 93, 168, 0.2);
+    }
+    &:active {
+      background-color: rgba(43, 93, 168, 0.2);
+    }
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    // justify-content: end;
+  }
+  .nav_pop_up {
+    display: flex !important;
+    flex-direction: row;
+    padding: 0;
+    position: unset;
+
+    background-color: transparent;
+    align-items: center;
+    justify-self: end;
+    gap: 24px;
+    a {
+      color: #000000;
+      &:hover {
+        background-color: transparent;
+        color: #000000;
+        text-decoration: underline;
+        margin-left: 0;
+      }
+    }
+  }
 }

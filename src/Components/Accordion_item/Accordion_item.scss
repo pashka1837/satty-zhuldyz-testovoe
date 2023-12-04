@@ -32,6 +32,7 @@
 
 .single_accordion_btn {
   cursor: pointer;
+  user-select: none;
   align-self: self-start;
   background-color: transparent;
   border: none;

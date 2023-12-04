@@ -10,6 +10,7 @@ import { IconParamsT } from "../../types/iconParamsT";
 import Responsive_icon from "../Responsive_icon/Responsive_icon";
 
 import "./Navbar.scss";
+import { useState } from "react";
 
 const menu_btn: IconParamsT = {
   iconMOB: menu_btn_MOB,
@@ -30,13 +31,40 @@ const notification_btn: IconParamsT = {
   alt: "notification button",
 };
 
+const tabs = [
+  {
+    text: "Лотереи",
+  },
+  {
+    text: "Акции",
+  },
+  {
+    text: "Кошелек",
+  },
+  {
+    text: "Мои билеты",
+  },
+  {
+    text: "Архив тиражей",
+  },
+  {
+    text: "Проверка билета",
+  },
+];
+
 export default function Navbar() {
+  const [isPopUpOpen, setPopUpOpen] = useState(false);
   const curLang = "kz";
+
   return (
     <nav>
       <div className="container">
         <div className="left_side">
-          <button className="menu_mob_btn" type="button">
+          <button
+            onClick={() => setPopUpOpen(!isPopUpOpen)}
+            className="menu_mob_btn"
+            type="button"
+          >
             <Responsive_icon {...menu_btn} />
           </button>
           <a href="https://sz.kz" className="logo_btn" type="button">
@@ -44,12 +72,30 @@ export default function Navbar() {
           </a>
           <p className="desc">Национальная лотерея</p>
         </div>
+        <div
+          className="nav_pop_up"
+          style={{ display: `${isPopUpOpen ? "flex" : "none"}` }}
+        >
+          {tabs.map((tab) => (
+            <a key={tab.text}>{tab.text}</a>
+          ))}
+        </div>
         <div className="right_side">
           <button className="notification_btn" type="button">
             <Responsive_icon {...notification_btn} />
           </button>
           <button className="change_lang_btn" type="button">
             {curLang}
+          </button>
+          <button
+            onClick={() => {
+              setPopUpOpen(!isPopUpOpen);
+              console.log(`hey`);
+            }}
+            className="menu_btn_DT"
+            type="button"
+          >
+            <Responsive_icon {...menu_btn} />
           </button>
         </div>
       </div>

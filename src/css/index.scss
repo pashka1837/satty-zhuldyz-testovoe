@@ -1,7 +1,7 @@
-@use 'variables' as v;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@use "variables" as v;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 :root {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 #root,
 * {
@@ -9,9 +9,22 @@
   margin: 0;
   padding: 0;
 }
-
+#root {
+  overflow: hidden;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
 
 body {
   color: v.$text-color;
   background-color: v.$BG-main-color;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    padding: 0 5%;
+  }
 }

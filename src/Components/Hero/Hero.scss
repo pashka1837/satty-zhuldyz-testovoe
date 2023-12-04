@@ -2,18 +2,17 @@
 
 .hero {
   margin-top: -(v.$NavBar-height);
-  height: 730px;
   position: relative;
   z-index: 1;
   &::before {
-    width: 385px;
+    width: 100%;
     height: 385px;
     background-image: url(assets/images/mobile/generic_ellipse_mob.svg);
     background-repeat: no-repeat;
     position: absolute;
     content: "";
     z-index: 0;
-    filter: blur(10px);
+    filter: blur(30px);
   }
 }
 
@@ -24,22 +23,37 @@
 .container_hero {
   position: relative;
   display: grid;
+  &::before {
+  }
 }
 
 .hero_images {
-  position: relative;
-  z-index: 1;
-  height: 600px;
+  height: 400px;
   /*new*/
   &::before {
     position: absolute;
-    height: 600px;
+    height: 734px;
     width: 100%;
+    top: -12%;
     content: "";
-    background-image: url(assets/images/mobile/hero_main_MOB.svg);
-    background-size: cover;
+    // background: url(assets/images/mobile/hero.svg) center/contain no-repeat,
+    //   url(assets/images/mobile/tirazh.svg) 10% 50% no-repeat;
+    background-image: url(assets/images/mobile/hero_main_MOB.png);
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
-    z-index: 0;
+
+    // z-index: 0;
+    // position: absolute;
+    // height: 734px;
+    // width: 125%;
+    // left: -12.5%;
+    // top: -10%;
+    // scale: 0.8;
+    // content: "";
+    // background-image: url(assets/images/mobile/hero_main_MOB.svg);
+    // background-size: cover;
+    // background-repeat: no-repeat;
   }
 }
 
@@ -92,4 +106,218 @@
 .ball_8 {
   right: 20px;
   top: 320px;
+}
+
+@media screen and (min-width: 380px) {
+  .hero_images {
+    &::before {
+      top: -6%;
+    }
+  }
+}
+
+@media screen and (min-width: 410px) {
+  .hero_images {
+    &::before {
+      top: -2%;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .hero_images {
+    height: 440px;
+    &::before {
+      background-size: 80%;
+    }
+  }
+  .ball_3,
+  .ball_5,
+  .ball_8 {
+    scale: 1.2;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .hero_images {
+    height: 500px;
+    &::before {
+      top: 5%;
+    }
+  }
+  .ball_3,
+  .ball_5,
+  .ball_8 {
+    scale: 1.4;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .hero_images {
+    height: 550px;
+    &::before {
+      top: 15%;
+    }
+  }
+  .ball_3 {
+    top: 280px;
+  }
+  .ball_8 {
+    top: 450px;
+  }
+  .ball_3,
+  .ball_5,
+  .ball_8 {
+    scale: 1.6;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 0 5%;
+    margin-top: 0;
+    &::before {
+      width: 0;
+      height: 0;
+      top: auto;
+      left: auto;
+      background: none;
+    }
+  }
+  .container_hero {
+    display: grid;
+    grid-template: "a b"/ 1fr 1fr;
+    width: 100%;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 110%;
+      height: 1100px;
+      background-image: url(assets/images/desktop/hero_main_DT.png);
+      background-size: contain;
+      background-position: top -10% right -70px;
+      background-repeat: no-repeat;
+    }
+  }
+  .hero_info {
+    grid-area: a;
+    align-self: self-end;
+  }
+  .hero_text_desktop {
+    display: block;
+  }
+  .hero_images {
+    grid-area: b;
+    height: 300px;
+    // position: relative;
+    &::before {
+      width: 0;
+      height: 0;
+      top: auto;
+      left: auto;
+      background: none;
+    }
+  }
+  .ball_3,
+  .ball_5,
+  .ball_8 {
+    scale: 0.6;
+  }
+
+  .ball_3 {
+    width: 266px;
+    height: 249.09px;
+    top: 100%;
+    left: 60%;
+  }
+  .ball_5 {
+    top: -5%;
+    left: 40%;
+    width: 136.57px;
+    height: 134.72px;
+  }
+  .ball_8 {
+    top: 0;
+    right: -120px;
+    width: 176.63px;
+    height: 166.14px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .hero_images {
+    height: 350px;
+  }
+  .container_hero {
+    &::before {
+      background-position: top -20% right -70px;
+    }
+  }
+  .ball_3 {
+    top: 120%;
+  }
+  .ball_5 {
+    left: 45%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .hero_images {
+    height: 450px;
+  }
+  .container_hero {
+    &::before {
+      background-position: top -35% right -70px;
+    }
+  }
+  .hero_title {
+    h1 {
+      font-size: 55px;
+      font-weight: 700;
+      line-height: 58px;
+    }
+  }
+  .hero_text {
+    p {
+      font-size: 20px;
+      line-height: 29px;
+    }
+    span {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 29px;
+    }
+  }
+  // .ball_3 {
+  //   top: 150%;
+  // }
+}
+
+@media screen and (min-width: 1275px) {
+  .hero {
+    padding-left: 10%;
+  }
+  .container_hero {
+    &::before {
+      background-position: top -80px right;
+    }
+  }
+  .ball_3,
+  .ball_5,
+  .ball_8 {
+    scale: 0.8;
+  }
+  .ball_3 {
+    top: 110%;
+  }
+
+  .ball_5 {
+    top: 10px;
+    left: 36%;
+  }
+
+  .ball_8 {
+    top: 20px;
+    right: -80px;
+  }
 }

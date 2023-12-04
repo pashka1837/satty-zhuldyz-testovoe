@@ -1,5 +1,5 @@
 .conditions {
-  padding: 0 14.5px;
+  padding: 45px 14.5px;
   position: relative;
 }
 .conditions_container,
@@ -50,7 +50,7 @@
 }
 
 .conditions_btn_container {
-  padding: 45px 0;
+  padding-top: 35px;
   z-index: 2;
 }
 
@@ -69,11 +69,24 @@
   font-weight: 700;
   font-size: 1rem;
   font-family: Inter;
-
   &:hover {
     background: linear-gradient(to right, #fea800, #fecc00);
   }
   &:active {
     scale: 1.05;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .conditions_buy_btn {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .conditions {
+    padding: 45px 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
