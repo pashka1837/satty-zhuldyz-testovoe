@@ -65,10 +65,10 @@ export default function Navbar() {
             className="menu_mob_btn"
             type="button"
           >
-            <Responsive_icon {...menu_btn} />
+            <Responsive_icon {...menu_btn} ref={null} />
           </button>
           <a href="https://sz.kz" className="logo_btn" type="button">
-            <Responsive_icon {...logo_btn} />
+            <Responsive_icon {...logo_btn} ref={null} />
           </a>
           <p className="desc">Национальная лотерея</p>
         </div>
@@ -82,20 +82,17 @@ export default function Navbar() {
         </div>
         <div className="right_side">
           <button className="notification_btn" type="button">
-            <Responsive_icon {...notification_btn} />
+            <Responsive_icon {...notification_btn} ref={null} />
           </button>
           <button className="change_lang_btn" type="button">
             {curLang}
           </button>
           <button
-            onClick={() => {
-              setPopUpOpen(!isPopUpOpen);
-              console.log(`hey`);
-            }}
+            onClick={() => setPopUpOpen(!isPopUpOpen)}
             className="menu_btn_DT"
             type="button"
           >
-            <Responsive_icon {...menu_btn} />
+            <Responsive_icon {...menu_btn} ref={null} />
           </button>
         </div>
       </div>

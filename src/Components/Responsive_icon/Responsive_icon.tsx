@@ -1,13 +1,10 @@
 import { IconParamsT } from "../../types/iconParamsT";
+import { forwardRef } from "react";
 
-export default function Responsive_icon({
-  iconMOB,
-  iconDT,
-  className,
-  alt,
-}: IconParamsT) {
+const Responsive_icon = forwardRef(function Responsive_icon(props, ref) {
+  const { iconMOB, iconDT, className, alt } = props as IconParamsT;
   return (
-    <picture className={className}>
+    <picture ref={ref} className={className}>
       <source
         media="(min-width: 768px)"
         srcSet={`${iconDT} 768w,`}
@@ -17,4 +14,6 @@ export default function Responsive_icon({
       <img src={iconMOB} alt={alt} />
     </picture>
   );
-}
+});
+
+export default Responsive_icon;

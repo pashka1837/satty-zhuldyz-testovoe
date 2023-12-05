@@ -46,5 +46,3 @@ export default function Conditions() {
     </section>
   );
 }
-
-// href="https://sz.kz"

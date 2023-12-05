@@ -7,7 +7,7 @@
   &::before {
     width: 100%;
     height: 385px;
-    background-image: url(assets/images/mobile/generic_ellipse_mob.svg);
+    background-image: url(/assets/images/mobile/generic_ellipse_mob.svg);
     background-repeat: no-repeat;
     position: absolute;
     content: "";
@@ -23,8 +23,6 @@
 .container_hero {
   position: relative;
   display: grid;
-  &::before {
-  }
 }
 
 .hero_images {
@@ -35,22 +33,16 @@
     width: 100%;
     top: -12%;
     content: "";
-    background-image: url(assets/images/mobile/hero_main_MOB.png);
+    background-image: url(/assets/images/mobile/hero_main_MOB.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    // background: url(assets/images/mobile/hero_super_MOB.png) no-repeat,
-    //   url(assets/images/mobile/hero_tirazh_MOB.png) no-repeat;
-    // background-position: center, left 0 top 20%;
-
-    // height: 534px;
   }
 }
 
 .hero_info {
   padding: 0 14.5px;
   height: min-content;
-  // margin-top: -50%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -89,7 +81,7 @@
 }
 
 .ball_5 {
-  right: 0;
+  right: -20px;
   top: 100px;
 }
 
@@ -179,7 +171,7 @@
       content: "";
       width: 110%;
       height: 1100px;
-      background-image: url(assets/images/desktop/hero_main_DT.png);
+      background-image: url(/assets/images/desktop/hero_main_DT.png);
       background-size: contain;
       background-position: top -10% right -70px;
       background-repeat: no-repeat;
@@ -269,9 +261,6 @@
       line-height: 29px;
     }
   }
-  // .ball_3 {
-  //   top: 150%;
-  // }
 }
 
 @media screen and (min-width: 1275px) {

@@ -11,7 +11,7 @@
   &::before {
     width: 236px;
     height: 236px;
-    background-image: url(assets/images/mobile/generic_ellipse_mob.svg);
+    background-image: url(/assets/images/mobile/generic_ellipse_mob.svg);
     background-repeat: no-repeat;
     position: absolute;
     top: -50px;
@@ -23,7 +23,7 @@
 
 .conditions_container {
   .message_box_container {
-    background-image: url(assets/images/mobile/msg_box_conditions_mob.svg);
+    background-image: url(/assets/images/mobile/msg_box_conditions_mob.svg);
     width: 231px;
     height: 85px;
     h1 {
