@@ -68,7 +68,8 @@
   color: #3f015c;
   font-weight: 700;
   font-size: 1rem;
-  font-family: Inter;
+  line-height: 19px;
+  letter-spacing: 0.01em;
   &:hover {
     background: linear-gradient(to right, #fea800, #fecc00);
   }
@@ -83,10 +84,44 @@
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 768px) {
   .conditions {
     padding: 45px 5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    &::before {
+      content: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .conditions_container {
+    .message_box_container {
+      width: 328.7px;
+      height: 131.8px;
+      h1 {
+        font-size: 35px;
+        line-height: 46px;
+      }
+    }
+  }
+  .condtions_list {
+    .list_item {
+      p {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1275px) {
+  .conditions {
+    padding-left: 10%;
+  }
+  .conditions_buy_btn {
+    width: 300px;
+    height: 60px;
   }
 }

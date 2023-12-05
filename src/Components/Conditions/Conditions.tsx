@@ -38,7 +38,7 @@ export default function Conditions() {
           </div>
         </div>
         <div className="conditions_btn_container">
-          <a className="conditions_buy_btn" type="button">
+          <a href="https://sz.kz" className="conditions_buy_btn" type="button">
             Купить билет
           </a>
         </div>

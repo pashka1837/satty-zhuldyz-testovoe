@@ -29,31 +29,21 @@
 
 .hero_images {
   height: 400px;
-  /*new*/
   &::before {
     position: absolute;
     height: 734px;
     width: 100%;
     top: -12%;
     content: "";
-    // background: url(assets/images/mobile/hero.svg) center/contain no-repeat,
-    //   url(assets/images/mobile/tirazh.svg) 10% 50% no-repeat;
     background-image: url(assets/images/mobile/hero_main_MOB.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    // background: url(assets/images/mobile/hero_super_MOB.png) no-repeat,
+    //   url(assets/images/mobile/hero_tirazh_MOB.png) no-repeat;
+    // background-position: center, left 0 top 20%;
 
-    // z-index: 0;
-    // position: absolute;
-    // height: 734px;
-    // width: 125%;
-    // left: -12.5%;
-    // top: -10%;
-    // scale: 0.8;
-    // content: "";
-    // background-image: url(assets/images/mobile/hero_main_MOB.svg);
-    // background-size: cover;
-    // background-repeat: no-repeat;
+    // height: 534px;
   }
 }
 
@@ -177,11 +167,7 @@
     padding: 0 5%;
     margin-top: 0;
     &::before {
-      width: 0;
-      height: 0;
-      top: auto;
-      left: auto;
-      background: none;
+      content: none;
     }
   }
   .container_hero {
@@ -209,13 +195,8 @@
   .hero_images {
     grid-area: b;
     height: 300px;
-    // position: relative;
     &::before {
-      width: 0;
-      height: 0;
-      top: auto;
-      left: auto;
-      background: none;
+      content: none;
     }
   }
   .ball_3,
@@ -302,6 +283,9 @@
       background-position: top -80px right;
     }
   }
+  .hero_info {
+    width: 555px;
+  }
   .ball_3,
   .ball_5,
   .ball_8 {
@@ -319,5 +303,11 @@
   .ball_8 {
     top: 20px;
     right: -80px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .ball_5 {
+    left: 41%;
   }
 }

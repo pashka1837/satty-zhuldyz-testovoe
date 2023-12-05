@@ -12,6 +12,9 @@
     }
   }
 }
+.msg_box_dt {
+  display: none;
+}
 
 .notation_list {
   .list_item {
@@ -23,4 +26,89 @@
       line-height: 20px;
     }
   }
+}
+
+@media screen and (min-width: 768px) {
+  .notation {
+    padding: 30px 5% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    z-index: 1;
+    &::before {
+      width: 944px;
+      height: 944px;
+      content: "";
+      background: url(assets/images/desktop/ball_8_nowaves_DT.png) no-repeat,
+        url(assets/images/desktop/ball_waves_DT.png) no-repeat;
+      background-position: right 47% top 50%, center;
+      position: absolute;
+      top: -150%;
+      right: -30%;
+      scale: 0.8;
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .msg_box_dt {
+    display: block;
+  }
+  .msg_box_mob {
+    display: none;
+  }
+  .notation {
+    &::before {
+      right: -10%;
+    }
+    .message_box_container {
+      width: 282.77px;
+      height: 121.7px;
+      background-image: url(assets/images/desktop/msg_box_notation_DT.svg);
+      h1 {
+        font-size: 35px;
+        line-height: 46px;
+      }
+    }
+  }
+  .notation_list {
+    display: grid;
+    gap: 20px;
+    .list_item {
+      padding: 4px 4px 4px 20px;
+      align-items: self-start;
+      gap: 20px;
+      p {
+        font-size: 20px;
+        line-height: 27px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1275px) {
+  .notation {
+    padding: 60px 10% 0;
+    &::before {
+      scale: 1;
+      top: -150%;
+      right: 0;
+    }
+  }
+
+  .notation_container {
+    width: 555px;
+  }
+
+  // .notation_list {
+  //   .list_item {
+  //     padding: 4px 4px 4px 20px;
+  //     align-items: self-start;
+  //     gap: 15px;
+  //     p {
+  //       font-size: 15px;
+  //       line-height: 20px;
+  //     }
+  //   }
+  // }
 }

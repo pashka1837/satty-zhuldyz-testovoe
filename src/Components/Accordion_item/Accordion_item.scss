@@ -36,7 +36,7 @@
   align-self: self-start;
   background-color: transparent;
   border: none;
-  transform: rotate(0deg);
+  transform: rotate(45deg);
   transition: all ease-in 0.2s;
   img {
     width: 20px;
@@ -44,11 +44,54 @@
   }
 }
 .open {
-  transform: rotate(45deg);
+  transform: rotate(0deg);
 }
 
 .single_accordion_answer {
   p {
     font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .single_accordion_question,
+  .single_accordion_answer {
+    padding: 25px;
+    p {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  .single_accordion_question {
+    p {
+      font-weight: 600;
+    }
+  }
+  .single_accordion_btn {
+    img {
+      width: 34.3px;
+      height: 34.3px;
+    }
+  }
+}
+
+@media screen and (min-width: 1275px) {
+  .single_accordion {
+    width: 555px;
+  }
+  .single_accordion_question,
+  .single_accordion_answer {
+    padding: 25px;
+    p {
+      font-size: 26px;
+      line-height: 29px;
+    }
+  }
+
+  .single_accordion_question {
+    p {
+      font-weight: 600;
+    }
   }
 }

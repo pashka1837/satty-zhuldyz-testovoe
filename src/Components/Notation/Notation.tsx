@@ -26,7 +26,13 @@ export default function Notation() {
   return (
     <section className="notation">
       <div className="notation_container">
-        <Message_box text="Это важно знать:" />
+        <div className="msg_box_mob">
+          <Message_box text="Это важно знать:" />
+        </div>
+        <div className="msg_box_dt">
+          <Message_box text="Важно знать:" />
+        </div>
+
         <div className="notation_list">
           {notation_data.map((obj) => (
             <ListItem key={obj.text} icon={bullet_icon_data} text={obj.text} />

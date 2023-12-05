@@ -13,3 +13,27 @@
     line-height: 18px;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .legal {
+    padding: 30px 5% 107px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .legal_container {
+    opacity: 0.5;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+
+@media screen and (min-width: 1275px) {
+  .legal {
+    padding: 30px 10% 107px;
+  }
+  .legal_container {
+    width: 555px;
+  }
+}
